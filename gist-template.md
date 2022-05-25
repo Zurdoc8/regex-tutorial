@@ -113,7 +113,9 @@ Denoted by "\b" which acts like an anchor depending on where in the expression i
     - After the last character in a string if the last character is a word character.
     - Between two characters in a string if one is a word character and the other is not. 
 
-Picture context
+
+<img width="718" alt="image" src="https://user-images.githubusercontent.com/97048430/170188251-246fd108-4575-42a6-a4ed-aeb8be34ee3e.png">
+
 
 ### Back-references
 Backreferences match the same text as previously matched by a capturing group. In order to know which number to use for a particular backreference simply look at the regEx from left to right anf cound the opening parentheses of each capturing group. First would be "1", Second parentheses would be "2" etc. The same one can be used multiple times within the same expression. The max amount of capturing groups supported by the engine is 99. 
@@ -132,6 +134,10 @@ If you use "!" as a negation operator in place of the "=" in the examples above 
 - Look-Behind (?<!d)a would only match an _a_ only if it is NOT preceded by _d_ and would not affect the rest of the regEx in any other way.
 ## Author
 
+![Andres](https://user-images.githubusercontent.com/97048430/170190977-96bf83a1-b8bc-40e3-8f37-b8cd66f9bfb2.JPG)
+
+- Zurdoc8 [Go to My GitHub](https://github.com/Zurdoc8)
+- For questions you may reach me at [email](mailto:garelan@gmail.com)
 
 ## References
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes
