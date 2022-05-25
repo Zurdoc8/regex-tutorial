@@ -73,7 +73,18 @@ The expression above will match any of the following strings:
 - I like cats, but not wolves.
 - I like cats, but not lions.
 ### Character Classes
+A character class defines a set of characters that help distinguish between letters and digits.
 
+- "." The period or dot matches any single character except line terminators, however, inside a character class it just matches a literal dot.
+- \d Matches any digit [0-9]
+- \D Matches any character that is NOT a digit [^0-9]
+- \w Matches any alphanumeric character from the alphabet (including the underscore "_"); [A-Za-z0-9 _]
+- \W Matches any character that is NOT an alphanumeric character [A-Za-z0-9_]
+- \s Matches a single white space character including _space, tab, form feed, line code and other Unicode spaces_ [ ]
+- \S Matches a single character other than a white space. [^ ]
+- \ Indicates that the character following the backspace should be treated specially (like the examples seen above), or that it needs to be "escaped" 
+
+Just like the examples above there are other character classes that you can use to create regEx.
 ### Flags
 
 ### Grouping and Capturing
@@ -92,3 +103,4 @@ The expression above will match any of the following strings:
 
 A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes
