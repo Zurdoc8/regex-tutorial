@@ -86,14 +86,34 @@ A character class defines a set of characters that help distinguish between lett
 
 Just like the examples above there are other character classes that you can use to create regEx.
 ### Flags
+There are 6 flags in javascript and when in use they could affect the search.
 
+- i When in use, the search is case-insensitive meaning there is no difference between "A" and "a"
+- g Known as the "global" flag meaning it will search for all and any matches, if it is not being used the search will stop after the first match.
+- m Multiline mode
+- s Enables "dotall" mode, that allows a dot "." to match newline character "\n"
+- u Enables full Unicode support or the correct processing of surrogate pairs.
+- y Enables "Sticky" mode to search at the exact position in the text.
+
+Those are the 6 flags for regEx in javascript. Use them accordingly to enhance your search or match regEx.
 ### Grouping and Capturing
-
+Grouping and capturing can be used to group regex components between parentheses _()_, curly brackets _{}_, square brackets _[]_, and/or backslashes \_ to different ends or effects on the regEx.
 ### Bracket Expressions
-
+- [] regEx inside the [] indicate a set of characters to match. If "^" is used before the regEx within the brackets it will match anything BUT the characters inside the brackets.
+- {} curly brackets are used to specify an exact amount of things to match and will always be preceded by a regEx _example [na]{2} would match "na" twice or [na]{2, 6} would match "na" between 2 and 6 times_
+- () these represent remembered matches. When these matches are remembered they can later be used in find-and-replace operations or when you have to do something with part of the match. Using the expression component "$n" where "n" is any number from 0-9 a value can be assigned to each remembered match.  
 ### Greedy and Lazy Match
+Probably the easiest way to describe these two terms would be:
 
+- Greedy Match = match the longest possible string.
+- Lazy Match = match the shortest possible string.
 ### Boundaries
+Denoted by "\b" which acts like an anchor depending on where in the expression it is used:
+    - Before the first character in a string if the first character is a word character.
+    - After the last character in a string if the last character is a word character.
+    - Between two characters in a string if one is a word character and the other is not. 
+
+image.png
 
 ### Back-references
 
