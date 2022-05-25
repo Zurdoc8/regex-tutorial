@@ -113,14 +113,27 @@ Denoted by "\b" which acts like an anchor depending on where in the expression i
     - After the last character in a string if the last character is a word character.
     - Between two characters in a string if one is a word character and the other is not. 
 
-image.png
+Picture context
 
 ### Back-references
+Backreferences match the same text as previously matched by a capturing group. In order to know which number to use for a particular backreference simply look at the regEx from left to right anf cound the opening parentheses of each capturing group. First would be "1", Second parentheses would be "2" etc. The same one can be used multiple times within the same expression. The max amount of capturing groups supported by the engine is 99. 
 
+Example: ([a-c])x\1x\1 matches _axaxa_, _bxbxb_, and _cxcxc_
 ### Look-ahead and Look-behind
+In these instances a match would only be validated if it meets some additional criteria such as _followed by_ or _preceded by_ a specific character or set of characters.
 
+Examples:
+- Look-Ahead a(?=d) would only match an _a_ only if it is followed by _d_ and would not affect the rest of the regEx in any other way.
+- Look-Behind (?<=d)a would only match an _a_ only if it is preceded by _d_ and would not affect the rest of the regEx in any other way.
+
+If you use "!" as a negation operator in place of the "=" in the examples above it will do the exact opposite:
+
+- Look-Ahead a(?!d) would only match an _a_ only if it is NOT followed by "d"
+- Look-Behind (?<!d)a would only match an _a_ only if it is NOT preceded by _d_ and would not affect the rest of the regEx in any other way.
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes
+## References
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes
+- https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285
+- https://www.javascripttutorial.net/regular-expression-word-boundaries/
